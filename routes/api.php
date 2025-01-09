@@ -37,7 +37,9 @@ Route::delete('DeleteAllCartItems',[CartItemsController::class,'DeleteAllCartIte
 
 
 
-Route::get('GetUser',[UserController::class,'GetUser'])->middleware('auth:sanctum');
+Route::get('GetUser',[UserController::class,'GetUser']);
+
+
 
 
 
