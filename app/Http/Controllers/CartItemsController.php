@@ -37,7 +37,6 @@ class CartItemsController extends Controller
         return $cartItem;
     }
 
-
     public function AddToCart(Request $request): JsonResponse
     {
         $user = Auth::user();
@@ -60,7 +59,6 @@ class CartItemsController extends Controller
         $cartItems = $user->cart_items;
         return response()->json($cartItems);
     }
-
 
     public function UpdateCartItem(Request $request, $CartItemID): JsonResponse
     {
@@ -98,5 +96,9 @@ class CartItemsController extends Controller
 
         return response()->json(['message' => 'All items deleted successfully'], 200);
     }
+
+
+
+
 
 }

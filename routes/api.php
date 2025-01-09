@@ -37,7 +37,7 @@ Route::delete('DeleteAllCartItems',[CartItemsController::class,'DeleteAllCartIte
 
 
 
-Route::get('GetUser',[UserController::class,'GetUser']);
+
 
 
 
