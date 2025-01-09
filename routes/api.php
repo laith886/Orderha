@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\CartItemsController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -36,7 +37,7 @@ Route::delete('DeleteCartItem/{CartItemID}',[CartItemsController::class,'DeleteC
 Route::delete('DeleteAllCartItems',[CartItemsController::class,'DeleteAllCartItems'])->middleware('auth:sanctum');
 
 
-
+Route::post('Search',[SearchController::class,'Search']);
 
 
 
