@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
@@ -16,13 +14,12 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->enum('state', ['pending', 'completed', 'cancelled']);
             $table->integer('total_price');
+            $table->string('address');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('orders');
